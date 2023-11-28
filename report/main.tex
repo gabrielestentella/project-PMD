@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+
+\title{Progetto di laboratorio}
+\subtitle{Corso di Progettazione Model Driven del Software}
+\author{Gabriele Stentella}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Descrizione del problema}
+
+% Questa sezione deve essere una versione sintetica del documento RASD (Requirements Analysis and Specification Document).
+% In particolare, deve contenere, come minimo:
+% \begin{enumerate}
+% \item la descrizione e specifica dei requisiti distinguendo tra requisiti funzionali e non funzionali;\footnote{Va definito e usato in modo consistente un formato per la descrizione (e indicizzazione) dettagliata dei requisiti.}
+% \item il glossario (con i termini in ordine alfabetico).
+% \end{enumerate}
+
+\subsection{Analisi e specifica dei requisiti}
+Viene richiesto di realizzare un applicativo per la gestione dei tirocini che rispetti i seguenti requisiti:
+\begin{itemize}
+   \item Requisiti funzionali
+   \begin{enumerate}
+      \item Lo studente deve poter compilare una richiesta di attivazione del tirocinio che può essere interno o esterno
+      \item Lo studente deve poter indicare i dati anagrafici relativi a se stesso e ai relatori, oltre alla data di inizio e di fine del tirocinio
+      \item Il relatore deve ricevere una notifica via mail quando uno studente compila una richiesta di tirocinio con lui
+      \item Il relatore deve poter visualizzare i dati relativi a tutti i tirocini in cui è coinvolto
+      \item Il relatore deve poter approvare o rifiutare una richiesta di tirocinio
+      \item Il relatore deve poter modificare i dati relativi a un tirocinio già approvato
+      \item Il relatore deve poter terminare un tirocinio
+      \item La commissione tirocini deve poter visualizzare i dati relativi a tutti i tirocini approvati dai relatori
+      \item La commissione tirocini deve poter approvare o rifiutare una richiesta di tirocinio
+   \end{enumerate}
+
+   \item Requisiti non funzionali
+   \begin{enumerate}
+      \item Lo studente deve poter attivare un tirocinio soltanto se ha già superato tutti gli esami obbligatori dei primi due anni, oppure ha acquisito almeno 120 CFU e deve ancora superare al più un esame fra quelli obbligatori nei primi due anni
+      \item Il relatore deve poter terminare un tirocinio solo se si è raggiunta o superata la data di fine del tirocinio
+      \item Il tirocinio deve durare almeno 14 settimane e non più di 24
+   \end{enumerate}
+\end{itemize}
+
+\subsection{Glossario}
+Definisce termini e acronimi utilizzati nel documento.
+
+\section{Progettazione del Sistema}
+\subsection{Diagramma dei casi d'uso}
+
+Per ogni caso d'uso ci deve essere almeno una descrizione testuale del caso d'uso. Per i casi d'uso principali (almeno per i casi d'uso base) deve esserci anche la descrizione di un possibile scenario, eventualmente con l'indicazione delle possibili varianti.
+
+\subsection{Descrizione degli scenari}
+
+\begin{table}[htbp]
+   \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Nome} & Nome del caso d'uso \\    \hline
+    \textbf{Scopo} & Breve descrizione dello scopo del caso d'uso  \\  \hline
+     \textbf{Attore} & Elenco attore/i coinvolti  \\  \hline
+     \textbf{Pre-condizioni} &  \\ \hline
+     \textbf{Trigger} &  \\  \hline
+     \textbf{Descrizione sequenza eventi} &  \\  \hline
+     \textbf{Alternativa/e} &  \\  \hline
+     \textbf{Post-condizioni} &  \\    \hline
+    \end{tabular}
+\end{table}   
+   
+Per cambiare l'aspetto della tabella potete far riferimento a un qualsiasi manuale LaTeX o alla Tabella \ref{tab:tabexample} di esempio.
+
+% Requires the booktabs if the memoir class is not being used
+\begin{table}[htbp]
+   \centering
+   \caption{Table captions are better up top} 
+   \begin{tabular}{@{} lcr @{}} % Column formatting, @{} suppresses leading/trailing space
+      \toprule
+      \multicolumn{2}{c}{Item} \\
+      \cmidrule(r){1-2} % Partial rule. (r) trims the line a little bit on the right; (l) & (lr) also possible
+      Animal    & Description & Price (\$)\\
+      \midrule
+      Gnat      & per gram & 13.65 \\
+                & each     &  0.01 \\
+      Gnu       & stuffed  & 92.50 \\
+      Emu       & stuffed  & 33.33 \\
+      Armadillo & frozen   &  8.99 \\
+     \bottomrule
+   \end{tabular}
+   %\caption{Remember, \emph{never} use vertical lines in tables.}
+   \label{tab:tabexample}
+\end{table}
+
+\subsection{Diagramma delle classi}
+
+In questo stadio ha senso che si riporti e si discuta il diagramma delle classi di progetto. Il diagramma delle classi di programma verrà presentato e discusso nella sezione relativa all'implementazione.
+
+Si ricordi che comunque il diagramma riportato in questa sezione:
+\begin{enumerate}
+\item Deve essere tracciabile con tutte le alte viste.
+\item Deve essere tracciabile con il codice nel caso si decida di riportare un unico diagramma delle classi (quindi solo quello di programma).
+\item Verrà valutato guardando se i principi chiave della progettazione OO siano stati considerati (classi altamente coese, poco accoppiamento tra classi, uso di gerarchia tra classi, ecc.) e considerando le associazioni tra classi.
+\end{enumerate}
+
+
+\subsection{Diagrammi di sequenza}
+
+Esempio di come inserire una fotografia (con didascalia): 
+\begin{figure}[htbp]
+   \centering
+   \includegraphics{images/minerva_piccola.png} % requires the graphicx package
+   \caption{Example caption}
+   \label{fig:example}
+\end{figure}
+
+\subsection{Diagrammi delle attivit\`a}
+
+\subsection{Macchine di stato}
+
+La notazione utilizzata per esprimere le macchine si stato deve essere usata in modo corretto, ad esempio i call event devono essere tracciabili con i messaggi dei casi d?uso e i metodi delle classi. Lo stesso si applica per tutte azioni che sono chiamate di metodi. 
+
+\end{document}  
