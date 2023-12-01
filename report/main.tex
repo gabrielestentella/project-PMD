@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage[T1]{fontenc}
 
 
 \title{Progetto di laboratorio}
@@ -40,14 +41,18 @@ Viene richiesto di realizzare un applicativo per la gestione dei tirocini che ri
 
    \item Requisiti non funzionali
    \begin{enumerate}
-      \item Lo studente deve poter attivare un tirocinio soltanto se ha già superato tutti gli esami obbligatori dei primi due anni, oppure ha acquisito almeno 120 CFU e deve ancora superare al più un esame fra quelli obbligatori nei primi due anni
+      \item Lo studente deve poter attivare un tirocinio soltanto se ha già superato tutti gli \emph{esami obbligatori} dei primi due anni, oppure ha acquisito almeno 120 CFU e deve ancora superare al più un esame fra quelli obbligatori nei primi due anni
       \item Il relatore deve poter terminare un tirocinio solo se si è raggiunta o superata la data di fine del tirocinio
       \item Il tirocinio deve durare almeno 14 settimane e non più di 24
    \end{enumerate}
 \end{itemize}
 
 \subsection{Glossario}
-Definisce termini e acronimi utilizzati nel documento.
+\begin{itemize} %DA ORDINARE IN ORDINE ALFABETICO
+   \item CFU: Crediti Formativi Universitari, unità di misura dell’impegno richiesto in termini di attività di studio o di apprendimento, un credito corrisponde convenzionalmente a 25 ore di impegno\footnote{fonte: https://www.unimi.it/it/corsi/orientarsi-e-scegliere/il-sistema-universitario}.
+   \item esami obbligatori: gli insegnamenti elencati nelle tabelle delle "Attività formative obbligatorie" contenute nel manifesto degli studi reperibile a https://apps.unimi.it/files/manifesti/ita_manifesto_F68of4_2024.pdf.
+   \item 
+\end{itemize}
 
 \section{Progettazione del Sistema}
 \subsection{Diagramma dei casi d'uso}
