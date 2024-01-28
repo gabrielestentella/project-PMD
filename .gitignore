@@ -1,6 +1,6 @@
 .DS_Store
 dettagli_valutazione_e_consegna.pdf
 specifica_progetto.pdf
-./report/documentazione.aux
-./report/documentazione.log
-./report/documentazione.tex
+report/documentazione.aux
+report/documentazione.log
+report/documentazione.tex
